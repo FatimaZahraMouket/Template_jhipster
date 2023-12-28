@@ -24,6 +24,8 @@ before_script:
   - export MAVEN_USER_HOME=pwd/.maven
   - bash mvnw -ntp com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v12.16.1 -DnpmVersion=6.14.2 -Dmaven.repo.local=$MAVEN_USER_HOME
   - bash mvnw -ntp com.github.eirslett:frontend-maven-plugin:npm -Dmaven.repo.local=$MAVEN_USER_HOME
+  - docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  - docker login -u "$DOCKERHUB_USERNAME" --password-stdin
 
 nohttp:
   stage: check
