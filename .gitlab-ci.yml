@@ -3,7 +3,7 @@ image: jhipster/jhipster:v7.9.3
 cache:
   key: '$CI_COMMIT_REF_NAME'
   paths:
-    - .mvn/
+    - .maven/
 stages:
   - check
   - build
@@ -13,10 +13,12 @@ stages:
   - release
   - deploy
 before_script:
+  - apt-get update && apt-get install -y unzip
   - curl -O https://raw.githubusercontent.com/apache/maven/master/maven-wrapper.zip
   - unzip -q maven-wrapper.zip
   - chmod +x mvnw
   - export MAVEN_USER_HOME=`pwd`/.maven
+
 
 nohttp:
   stage: check
