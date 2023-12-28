@@ -13,7 +13,7 @@ stages:
   - release
   - deploy
 before_script:
-  - chmod -R a+x
+  - chmod -R x
   - export MAVEN_USER_HOME=`pwd`/.maven
 
 nohttp:
