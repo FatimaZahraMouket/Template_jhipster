@@ -29,7 +29,7 @@ before_script:
 nohttp:
   stage: check
   script:
-    - .bash mvnw -ntp checkstyle:check -Dmaven.repo.local=$MAVEN_USER_HOME
+    - bash mvnw -ntp checkstyle:check -Dmaven.repo.local=$MAVEN_USER_HOME
 
 maven-compile:
   stage: build
