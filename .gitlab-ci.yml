@@ -14,6 +14,7 @@ stages:
   - release
   - deploy
   - docker-push  
+  - kube
 
 before_script:
   - export MAVEN_USER_HOME=pwd/.maven
@@ -64,3 +65,14 @@ docker-push-hub:
     - docker pull "$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA"
     - docker tag "$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA" "$DOCKERHUB_USERNAME/bio_app:latest"
     - docker push "$DOCKERHUB_USERNAME/bio_app:latest"
+
+
+ deploy_kubeneties:
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  stage : kube
+  script:
+    - kubectl config get-contexts
+    - kubectl config use-context fatimazahra20mouket/fatimazahrmoukettemplate:k8s-connection
+    - kubectl get pods
