@@ -1,5 +1,5 @@
 gitops:
   manifest_projects:
-  - id: "kubernetes/monitoring"
+  - id: "53436927"
     paths:
     - glob: '/manifests/*.{yaml,yml,json}'
