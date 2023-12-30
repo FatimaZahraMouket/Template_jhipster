@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: appbiomedicalekube
+  name: appbiomedicalekube
+spec:
+  containers:
+  - image: registry.gitlab.com/fatimazahra20mouket/fatimazahrmoukettemplate/master-92fbf7b23816a1cd512a0c6bd30ed60c6edac825:latest
+    name: appbiomedicalekube
+  restartPolicy: Always
