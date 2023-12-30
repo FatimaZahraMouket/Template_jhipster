@@ -77,6 +77,6 @@ deploy_kubeneties:
     - kubectl get pods
     - kubectl get nodes -o wide 
     - echo "Doplument app to k8s"
-    - kubectl apply -f fatimazahra20mouket/fatimazahrmoukettemplate/k8s/.
+    - kubectl apply -f $CI_PROJECT_DIR/k8s/.
     - kubectl get pods
     - kubectl get svc
