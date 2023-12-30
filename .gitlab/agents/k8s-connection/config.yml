@@ -1,0 +1,5 @@
+gitops:
+  manifest_projects:
+  - id: "kubernetes/monitoring"
+    paths:
+    - glob: '/manifests/*.{yaml,yml,json}'
