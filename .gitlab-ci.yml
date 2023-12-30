@@ -75,3 +75,4 @@ deploy_kubeneties:
     - kubectl config get-contexts
     - kubectl config use-context fatimazahra20mouket/fatimazahrmoukettemplate:k8s-connection
     - kubectl get pods
+    - kubectl get svc
