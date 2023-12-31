@@ -8,6 +8,7 @@ spec:
   containers:
   - image: registry.gitlab.com/fatimazahra20mouket/fatimazahrmoukettemplate/master:latest
     name: appbiomedicalekube
+    imagePullPolicy: Always
   restartPolicy: Always
   imagePullSecrets:
     - name : app-secret
