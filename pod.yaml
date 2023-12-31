@@ -6,7 +6,7 @@ metadata:
   name: appbiomedicalekube
 spec:
   containers:
-  - image: registry.gitlab.com/fatimazahra20mouket/fatimazahrmoukettemplate/master-92fbf7b23816a1cd512a0c6bd30ed60c6edac825:latest
+  - image: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG
     name: appbiomedicalekube
   restartPolicy: Always
 
