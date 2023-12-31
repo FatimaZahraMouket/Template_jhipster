@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    run: appbiomedicalekub
-  name: appbiomedicalekub
+    run: appbiomedicaleku
+  name: appbiomedicaleku
 spec:
   containers:
   - image: registry.gitlab.com/fatimazahra20mouket/fatimazahrmoukettemplate/master:latest
-    name: appbiomedicalekub
+    name: appbiomedicaleku
   restartPolicy: Always
   imagePullSecrets:
-    - name : app-secrett
+    - name : app-secre

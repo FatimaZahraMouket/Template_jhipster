@@ -11,7 +11,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    run: appbiomedicalekub
+    run: appbiomedicaleku
   type: NodePort
 status:
   loadBalancer: {}
