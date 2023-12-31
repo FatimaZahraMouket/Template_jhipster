@@ -6,9 +6,8 @@ metadata:
   name: appbiomedicalekube
 spec:
   containers:
-  - image: "$DOCKERHUB_USERNAME/bio_app:latest"
+  - image: registry.gitlab.com/fatimazahra20mouket/fatimazahrmoukettemplate/master:latest
     name: appbiomedicalekube
-    imagePullPolicy: Always
   restartPolicy: Always
   imagePullSecrets:
     - name : app-secret
