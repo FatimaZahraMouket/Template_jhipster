@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: appbiomedicalekube
+  name: appbiomedicalekube
+spec:
+  containers:
+  - image: "$DOCKERHUB_USERNAME/bio_app:latest"
+    name: appbiomedicalekube
+    imagePullPolicy: Always
+  restartPolicy: Always
+  imagePullSecrets:
+    - name : app-secret
