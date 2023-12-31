@@ -6,7 +6,7 @@ metadata:
   name: appbiomedicalekube
 spec:
   containers:
-  - image: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG
+  - image: "$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG"
     name: appbiomedicalekube
   restartPolicy: Always
 

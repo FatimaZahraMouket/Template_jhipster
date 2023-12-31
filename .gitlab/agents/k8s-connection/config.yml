@@ -1,0 +1,5 @@
+gitops:
+  manifest_projects:
+  - id: "53436927"
+    paths:
+    - glob: '/k8s/*.{yaml,yml,json}'
